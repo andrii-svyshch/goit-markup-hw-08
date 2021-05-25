@@ -1,0 +1,31 @@
+.social {
+  display: flex;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--base-bg-color);
+  color: var(--soc-lk-cr);
+
+  transition: color var(--anime), background-color var(--anime);
+
+  &:hover,
+  &:focus {
+    color: var(--base-bg-color);
+    background-color: var(--accent-color);
+  }
+}
+
+.social__svg {
+  fill: currentColor;
+}
+
+.social__item:not(:first-child) {
+  margin-left: 10px;
+}

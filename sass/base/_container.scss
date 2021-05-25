@@ -1,0 +1,18 @@
+.container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include for-phone-only {
+    width: 480px;
+  }
+
+  @include for-tablet-only {
+    width: 768px;
+  }
+
+  @include for-desktop {
+    width: 1200px;
+  }
+}

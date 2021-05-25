@@ -1,0 +1,68 @@
+.contacts {
+  display: flex;
+  flex-direction: column-reverse;
+  margin-top: 306px;
+  margin-bottom: 64px;
+
+  @include for-tablet {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+
+    margin-left: auto;
+  }
+  @include for-desktop {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+.contacts__item:not(:first-child) {
+  margin-bottom: 32px;
+
+  @include for-tablet {
+    margin-bottom: 0px;
+    margin-top: 10px;
+  }
+
+  @include for-desktop {
+    margin-top: 0;
+    margin-left: 50px;
+  }
+}
+
+.contacts__link {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+
+  color: var(--text-color);
+
+  &.accent {
+    @include for-phone {
+      font-size: 34px;
+      color: var(--accent-color);
+    }
+  }
+
+  @include for-tablet {
+    font-size: 12px;
+  }
+
+  @include for-desktop {
+    display: flex;
+    align-items: center;
+
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+.contacts__icon {
+  margin-right: 10px;
+  fill: currentColor;
+  @include for-phone {
+    display: none;
+  }
+}

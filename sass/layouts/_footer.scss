@@ -1,0 +1,86 @@
+.footer {
+  background-color: var(--secondary-bg-color);
+}
+
+.footer__container {
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include for-phone {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @include for-tablet {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-around;
+  }
+}
+
+.footer__info {
+  text-align: center;
+
+  @include for-desktop {
+    text-align: left;
+  }
+}
+
+.footer__logo {
+  margin-bottom: 20px;
+
+  color: var(--base-bg-color);
+
+  @include for-tablet-max {
+    justify-content: center;
+  }
+}
+
+.footer__address {
+  margin-bottom: 9px;
+  color: var(--base-bg-color);
+  font-style: normal;
+}
+
+.footer__link {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+}
+
+.footer__mail {
+  margin-bottom: 9px;
+}
+
+.footer__socials {
+  @include for-phone {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
+  @include for-tablet-max {
+    text-align: center;
+  }
+
+  @include for-desktop {
+    margin-left: 70px;
+    text-align: left;
+  }
+}
+
+.footer__label {
+  display: block;
+  font-weight: bold;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--base-bg-color);
+  margin-bottom: 20px;
+}
+
+.footer__social-link {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--base-bg-color);
+
+  transition: background-color var(--anime);
+}

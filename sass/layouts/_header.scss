@@ -1,0 +1,78 @@
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.page-header__container {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  @include for-phone {
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+}
+
+.mobile-menu {
+  @include for-phone {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+    padding: 48px 0 48px 40px;
+    background-color: var(--base-bg-color);
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @include for-tablet {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 83px;
+  }
+
+  @include for-desktop {
+    margin-left: 93px;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  z-index: 999;
+
+  display: inline-flex;
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  & .icon-cross {
+    display: none;
+  }
+  &.is-open .icon-cross {
+    display: block;
+  }
+
+  &.is-open .icon-menu {
+    display: none;
+  }
+
+  @include for-tablet {
+    display: none;
+  }
+}

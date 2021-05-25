@@ -1,0 +1,38 @@
+.speciality {
+  display: none;
+  @include for-desktop {
+    display: block;
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.speciality__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+
+.speciality__item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc((100% - 90px) / 3);
+}
+
+.speciality__thumb {
+  position: relative;
+}
+
+.speciality__lable {
+  position: absolute;
+  min-height: 70px;
+  width: 100%;
+  bottom: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(47, 48, 58, 0.8);
+}

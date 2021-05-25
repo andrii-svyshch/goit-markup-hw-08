@@ -1,0 +1,64 @@
+.subscribe {
+  @include for-tablet-only {
+    margin-top: 60px;
+  }
+  @include for-desktop {
+    margin-left: auto;
+  }
+}
+
+.subscribe__form {
+  @include for-tablet-max {
+    text-align: center;
+  }
+}
+
+.subscribe__form-field {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  padding-left: 16px;
+  color: var(--base-bg-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: var(--border-rad);
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @include for-desktop {
+    display: inline-block;
+    width: 358px;
+
+    margin-right: 12px;
+    margin-bottom: 0;
+  }
+}
+
+.subscribe__form-field::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.subscribe__form-field:-webkit-autofill,
+.subscribe__form-field:-webkit-autofill:hover,
+.subscribe__form-field:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--base-bg-color);
+  -webkit-box-shadow: 0 0 0px 1000px var(--secondary-bg-color) inset;
+  box-shadow: 0 0 0px 1000px var(--secondary-bg-color) inset;
+}
+
+.subscribe__submit-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.subscribe__submit-icon {
+  margin-left: 10px;
+  fill: currentColor;
+}
