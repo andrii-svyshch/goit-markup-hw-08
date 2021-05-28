@@ -1,3 +1,6 @@
+.navigation {
+  flex-grow: 1;
+}
 .navigation__list {
   @include for-tablet {
     display: flex;

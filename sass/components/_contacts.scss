@@ -1,15 +1,12 @@
 .contacts {
   display: flex;
   flex-direction: column-reverse;
-  margin-top: 306px;
   margin-bottom: 64px;
 
   @include for-tablet {
     display: block;
     margin-top: 0;
     margin-bottom: 0;
-
-    margin-left: auto;
   }
   @include for-desktop {
     display: flex;

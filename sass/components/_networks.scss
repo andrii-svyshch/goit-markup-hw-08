@@ -1,8 +1,13 @@
 .networks {
   display: flex;
+  flex-wrap: wrap;
   @include for-tablet {
     display: none;
   }
+}
+
+.networks__item {
+  margin-bottom: 10px;
 }
 
 .networks__item:not(:last-child)::after {
